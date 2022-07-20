@@ -15,6 +15,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import com.auro.openactivity.OpenInclusion
 import com.auro.projectinclusion.Model.SendOtpModel
 import com.auro.projectinclusion.R
 import com.auro.projectinclusion.auth.AuthViewModel
@@ -45,6 +46,8 @@ class OtpVerificationActivity : AppCompatActivity(),VerifyOtpListener,OtpSendLis
         viewmodel.mVerifyOtpListener = this
         viewmodel.mSendOtpListener = this
         mBinding.resendSmsLayout.isEnabled = false
+
+
         object : CountDownTimer(30000, 1000) {
             override fun onTick(millisUntilFinished: Long) {
                 mBinding.otpTimerText.setText(""+ millisUntilFinished / 1000)

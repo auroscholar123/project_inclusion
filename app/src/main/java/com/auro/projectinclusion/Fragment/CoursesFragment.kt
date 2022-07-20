@@ -9,6 +9,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProviders
+import com.auro.openactivity.OpenInclusion
+import com.auro.projectinclusion.Activity.SplashActivity
 import com.auro.projectinclusion.Activity.UserProfileActivity
 import com.auro.projectinclusion.R
 import com.auro.projectinclusion.auth.AuthViewModel
@@ -34,6 +36,8 @@ class CoursesFragment : Fragment() {
         val view = mBinding.root
         mViewModel = ViewModelProviders.of(this).get(AuthViewModel::class.java)
         mBinding.viewmodel = mViewModel
+
+      //  OpenInclusion.opensplash(context!!, SplashActivity())
 
         mBinding.imgProfileLayout.setOnClickListener {
 
