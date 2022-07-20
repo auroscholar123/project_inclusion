@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+   <data>
+      <variable
+          name="viewmodel"
+          type="com.auro.projectinclusion.auth.AuthViewModel" />
+   </data>
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       tools:context=".Activity.DashBoardActivity">
+
+
+
+      <androidx.viewpager2.widget.ViewPager2
+          android:id="@+id/viewpager"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:visibility="visible"
+          android:layout_above="@+id/tablayout"
+          android:orientation="horizontal">
+
+      </androidx.viewpager2.widget.ViewPager2>
+
+      <com.google.android.material.tabs.TabLayout
+          android:id="@+id/tablayout"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          app:tabGravity="center"
+          app:tabIndicator="@null"
+          android:visibility="visible"
+          app:tabIndicatorFullWidth="true"
+          app:tabMode="scrollable"
+          app:tabSelectedTextColor="@color/white"
+          app:tabBackground="@drawable/tab_selector"
+          app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+          android:layout_alignParentBottom="true"></com.google.android.material.tabs.TabLayout>
+
+
+
+   </RelativeLayout>
+
+</layout>

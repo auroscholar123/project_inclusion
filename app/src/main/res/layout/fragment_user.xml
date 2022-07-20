@@ -1,14 +1,325 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Fragment.UserFragment">
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.auro.projectinclusion.auth.AuthViewModel" />
+
+    </data>
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@color/back_color"
+        tools:context=".Activity.UserProfileActivity">
 
-</FrameLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative_back_certificate"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="44dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/signup_back"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_path_25"></ImageView>
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/certificate_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="107dp"
+            android:layout_marginTop="44dp"
+            android:fontFamily="@font/metropolis_semibold"
+            android:text="Profile"
+            android:textColor="@color/profile_color"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/relative_back_certificate"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <RelativeLayout
+            android:id="@+id/profile_layout_relative"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@+id/certificate_heading"
+            android:layout_marginTop="30dp">
+
+            <RelativeLayout
+                android:id="@+id/profile_img_layout"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/background_profile">
+
+                <ImageView
+                    android:id="@+id/profile_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/man_img"></ImageView>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/profile_name_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profile_img_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/metropolis_semibold"
+                android:text="Ankesh"
+                android:textColor="@color/profile_color"
+                android:textSize="18sp"></TextView>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical"
+            android:layout_below="@+id/profile_layout_relative">
+
+            <RelativeLayout
+                android:id="@+id/profile_detail_layout"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/corner_background">
+
+                <RelativeLayout
+                    android:id="@+id/profile_detai_icon_layout"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/profile_icon_background">
+
+                    <ImageView
+                        android:id="@+id/profile_detail_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_profile_detail_icon">
+
+                    </ImageView>
+
+
+
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/profile_details_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/profile_detai_icon_layout"
+                    android:fontFamily="@font/metropolis_semibold"
+                    android:text="Profile Details"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/profile_color"
+                    android:textSize="16sp"></TextView>
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/ic_baseline_keyboard_arrow_right"></ImageView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/language_layout"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="3dp"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:id="@+id/language_icon_layout"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/profile_icon_background">
+
+                    <ImageView
+                        android:id="@+id/language_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_language_icon">
+
+                    </ImageView>
+
+
+
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/language_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/language_icon_layout"
+                    android:fontFamily="@font/metropolis_semibold"
+                    android:text="Language"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/profile_color"
+                    android:textSize="16sp"></TextView>
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/ic_baseline_keyboard_arrow_right"></ImageView>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:id="@+id/change_pswd_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp">
+
+                    <RelativeLayout
+                        android:id="@+id/chng_pswd_layout"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/profile_icon_background">
+
+                        <ImageView
+                            android:id="@+id/chng_pswd_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_chng_pswd_icon">
+
+                        </ImageView>
+
+
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:id="@+id/chnge_pswd_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/chng_pswd_layout"
+                        android:fontFamily="@font/metropolis_semibold"
+                        android:text="Change password"
+                        android:textColor="@color/profile_color"
+                        android:textSize="16sp"></TextView>
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_right"></ImageView>
+
+                </RelativeLayout>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginBottom="30dp"
+                    app:cardUseCompatPadding="true"
+                    android:layout_alignParentBottom="true"
+                    android:elevation="7dp"
+                    app:cardCornerRadius="10dp"
+                    >
+
+                    <RelativeLayout
+                        android:id="@+id/signup_continue_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:background="@drawable/button_background">
+
+                        <TextView
+                            android:id="@+id/crt_acnt_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/metropolis_light"
+                            android:text="Logout"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:textStyle="bold"></TextView>
+
+                        <RelativeLayout
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:visibility="gone"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="15dp"
+                            android:background="@drawable/circular_over_button">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/ic_baseline_keyboard_arrow_right_24"></ImageView>
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </RelativeLayout>
+
+
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

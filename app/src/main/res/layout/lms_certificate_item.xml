@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="12dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+       <RelativeLayout
+           android:id="@+id/image_relative_layout"
+           android:layout_width="60dp"
+           android:layout_height="60dp"
+           android:layout_marginTop="12dp"
+           android:layout_marginLeft="12dp"
+           android:background="@drawable/curve_grey_background">
+
+       </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/image_relative_layout">
+
+
+            <TextView
+                android:id="@+id/lms_heading_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="Course 1"
+                android:textColor="@color/item_text_color"
+                android:fontFamily="@font/metropolismedium"></TextView>
+
+            <TextView
+                android:id="@+id/lms_subheading_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:layout_marginTop="7dp"
+                android:text="Lorem Ipsum is simply dummy text of the printing and"
+                android:textColor="@color/item_text_color"
+                android:fontFamily="@font/metropolismedium"></TextView>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

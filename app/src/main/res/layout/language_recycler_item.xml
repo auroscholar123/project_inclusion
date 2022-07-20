@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/lang_layout"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/language_background">
+
+        <TextView
+            android:id="@+id/language_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Language"
+            android:textSize="16sp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/language_color"></TextView>
+
+    </RelativeLayout>
+
+</LinearLayout>

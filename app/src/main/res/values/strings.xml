@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">Project Inclusion</string>
+    <string name="language_choose">Choose your language</string>
+    <string name="lang_pref_string">Your language prefrence can be changes \n at any time in settings</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="signup_header">Please fill your following credentials</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="age">Age</string>
+    <string name="gender">Gender</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="whatsapp_number">Whatsapp Number</string>
+    <string name="email">Email ID</string>
+    <string name="higher_education">Higher Education</string>
+    <string name="experience">Experience in years</string>
+    <string name="udis">Udis</string>
+    <string name="ocuupation">Occupation</string>
+    <string name="designation">Designation</string>
+    <string name="state">State</string>
+    <string name="district">District</string>
+    <string name="block">Block</string>
+    <string name="school_name">Name of School</string>
+    <string name="state_district_school">State and district of the school</string>
+    <string name="children_strength">Strength of Children in school</string>
+    <string name="teacher_strength">Strength of Teachers in school</string>
+    <string name="ndd">Number of students of NDD in school</string>
+    <string name="principal_name">Principal Name</string>
+    <string name="principal_phone_number">Principal phone number</string>
+    <string name="signup_title">Hello! Sign Up</string>
+    <string name="name_txt">First Name</string>
+    <string name="lname_txt">Last Name</string>
+    <string name="email_name_txt">Email</string>
+    <string name="username_text">Email or Name</string>
+    <string name="password_txt">Password</string>
+    <string name="otp_verification">OTP Verification</string>
+    <string name="verification_msg">We have sent a verification code to</string>
+    <string name="cont_text">Continue</string>
+    <string name="log_signup_txt">Login or Sign Up</string>
+    <string name="password_txt_frag">Enter Password</string>
+    <string name="resend_sms">Resend SMS in 16 sec</string>
+    <string name="call_txt">Call me in 16 sec</string>
+    <string name="welcome_txt">Welcome</string>
+    <string name="please_select_txt">Please Select</string>
+    <string name="password_header">Enter Password</string>
+    <string name="create_accnt">Create Account</string>
+    <string name="resend_otp">Resend otp in :</string>
+    <string name="forget_pswd">Forgot Password ?</string>
+    <string name="click_here">Click Here</string>
+
+
+</resources>
